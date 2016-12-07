@@ -21,4 +21,19 @@ describe ('TwitterDataHelper', function () {
         });
     });
 
+    describe ('#TwitterTopics', function () {
+        var trendResponse = [{
+            trends : [{name: '#DonaldTrump', tweet_volume: '50786'},
+                        {name: '#HilaryClinton', tweet_volume: '50786'} ],
+            locations : [{name: 'WorldWide', woeid: 1}]
+        }];
+
+        context ('with Current topic', function () {
+            it ('returns current topic', function () {
+                var topic = subject.twitterTopics (trendResponse)
+                return expect(topic).to.eq('#DonaldTrump');
+            })
+        });
+    })
+
 });

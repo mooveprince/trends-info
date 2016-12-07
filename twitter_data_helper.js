@@ -19,9 +19,11 @@ TwitterDataHelper.prototype.getTwitterTrends = function ( ) {
         resolveWithFullResponse: true,
         json: true
     };
-
     return rp (options);
+}
 
+TwitterDataHelper.prototype.twitterTopics = function (trendResponse) {
+    
 }
 
 module.exports = TwitterDataHelper;
