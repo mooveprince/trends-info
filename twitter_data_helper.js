@@ -23,7 +23,9 @@ TwitterDataHelper.prototype.getTwitterTrends = function ( ) {
 }
 
 TwitterDataHelper.prototype.twitterTopics = function (trendResponse) {
-    
+    return _.template('Current trending topic in twitter is  ${topic}')({
+      topic: trendResponse[0].trends[0].name
+    });
 }
 
 module.exports = TwitterDataHelper;

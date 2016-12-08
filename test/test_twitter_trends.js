@@ -30,8 +30,8 @@ describe ('TwitterDataHelper', function () {
 
         context ('with Current topic', function () {
             it ('returns current topic', function () {
-                var topic = subject.twitterTopics (trendResponse)
-                return expect(topic).to.eq('#DonaldTrump');
+                var topic = subject.twitterTopics (trendResponse);
+                return expect(topic).to.eq('Current trending topic in twitter is  #DonaldTrump');
             })
         });
     })
